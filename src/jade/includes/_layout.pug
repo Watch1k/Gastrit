@@ -1,0 +1,19 @@
+include _mixins
+
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    block title
+      title Template
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    meta(name="format-detection" content="telephone=no")
+    meta(name="theme-color" content="#fff")
+    block css
+      link(rel="stylesheet" media="all" href="css/screen.css")
+    <!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
+  body
+    .wrapper
+      block content
+    block js
+      script(src="js/app.js")

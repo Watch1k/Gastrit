@@ -1,0 +1,1318 @@
++font('FiraSans-Bold', 'FiraSans-Bold')
++font('FiraSans-ExtraBold', 'FiraSans-ExtraBold')
++font('FiraSans-Heavy', 'FiraSans-Heavy')
++font('FiraSans-Light', 'FiraSans-Light')
++font('FiraSans-UltraLight', 'FiraSans-UltraLight')
++font('FiraSans-Thin', 'FiraSans-Thin')
+
++font('OpenSans-Bold', 'OpenSans-Bold')
++font('OpenSans-ExtraBold', 'OpenSans-ExtraBold')
++font('OpenSans-SemiBold', 'OpenSans-SemiBold')
++font('OpenSans-Regular', 'OpenSans')
+
+// fonts
+$default-fonts: Arial, sans-serif
+
+=fira-bold
+	font-family: 'FiraSans-Bold', $default-fonts
+=fira-extrabold
+	font-family: 'FiraSans-ExtraBold', $default-fonts
+=fira-heavy
+	font-family: 'FiraSans-Heavy', $default-fonts
+=fira-light
+	font-family: 'FiraSans-Light', $default-fonts
+=fira-ultralight
+	font-family: 'FiraSans-UltraLight', $default-fonts
+=fira-thin
+	font-family: 'FiraSans-Thin', $default-fonts
+=sans-bold
+	font-family: 'OpenSans-Bold', $default-fonts
+=sans-semibold
+	font-family: 'OpenSans-SemiBold', $default-fonts
+=sans-extrabold
+	font-family: 'OpenSans-ExtraBold', $default-fonts
+=sans-regular
+	font-family: 'OpenSans-Regular', $default-fonts
+
+// colors
+// $black: #000
+
+=trs
+	transition: all 0.25s
+	
+=smooth
+	-webkit-font-smoothing: antialiased
+
+
+/* ===================================
+	 Main Styles
+	 =================================== */
+body
+	position: relative
+	min-width: 320px
+	+sans-regular
+	font-size: 16px
+	color: #ffffff
+	line-height: 1.5
+	background-color: #ffffff
+	&.is-locked
+		overflow: hidden
+
+.wrapper
+	position: relative
+	z-index: 1
+	overflow: hidden
+	margin: 0 auto
+
+.container
+	max-width: 960px
+	margin: 0 auto
+	padding: 0 15px
+	+pie-clearfix
+
+
+/* Helpers
+	----------------------------------- */
+button
+	background-color: transparent
+
+a:hover, a:focus
+	text-decoration: none
+
+a
+	color: inherit
+	text-decoration: none
+
+table
+	vertical-align: top
+
+img
+	max-width: 100%
+	vertical-align: top
+
+.icon
+	display: inline-block
+	vertical-align: middle
+
+.text-left
+	text-align: left
+
+.text-center
+	text-align: center
+
+.text-right
+	text-align: right
+
+.is-hidden
+	display: none
+
+.vertical
+	display: inline-block
+	vertical-align: middle
+
+.cfx
+	+pie-clearfix
+
+// *
+// 	+selection
+// 		color: #fff
+// 		background-color: $red
+
+.row
+	+pie-clearfix
+	
+.recall-btn
+	position: absolute
+	z-index: 99
+	display: inline-block
+	top: 25px
+	right: 25px
+	padding: 13px 25px 13px
+	+sans-regular
+	font-size: 16px
+	color: #000000
+	line-height: 1.5
+	text-transform: uppercase
+	background-color: #fbe340
+	border-radius: 25px
+	box-shadow: 0 9px 9px 1px rgba(0, 2, 6, 0.6)
+	transform-origin: center bottom
+	+trs
+	+smooth
+	+r(1023)
+		white-space: nowrap
+		width: auto
+		left: 50%
+		top: 10px
+		transform: translateX(-50%)
+		text-align: center
+		margin-left: auto
+		margin-right: auto
+		font-size: 16px
+	+r(479)
+		font-size: 13px
+	&:hover
+		background-color: darken(#fbe340,15)
+	&:active
+		background-color: #fbe340
+		transform: scale(0.95) translateY(5px)
+		box-shadow: 0 3px 3px 1px rgba(0, 2, 6, 0.6)
+		+r(1023)
+			transform: scale(0.95) translateX(-50%)
+			transform-origin: left center
+		
+.btn-red
+	display: inline-block
+	padding: 19px 50px 21px
+	+sans-bold
+	color: #ffffff
+	font-size: 18px
+	line-height: 1.33
+	text-transform: uppercase
+	background-color: #e8293b
+	background-image: linear-gradient(to top, #b31d1e 0%, #e8293b 49%, #f2595d 59%, #f25050 100%)
+	border-radius: 33px
+	box-shadow: 0 7px 16px 1px rgba(0, 2, 6, 0.6)
+	+trs
+	&:hover
+		opacity: 0.9
+	&:active
+		opacity: 1
+		transform: scale(0.95) translateY(5px)
+		box-shadow: 0 4px 8px 1px rgba(0, 2, 6, 0.6)
+
+.section
+	background-position: center center
+	background-size: cover
+	background-repeat: no-repeat
+	&_1
+		position: relative
+		z-index: 1
+		min-height: 979px
+		background-position: center bottom
+		background-image: url('../img/bg/1.jpg')
+		+r(767)
+			background-position: left bottom
+	&_2
+		position: relative
+		z-index: 2
+	&_3
+		position: relative
+		z-index: 3
+		min-height: 993px
+		background-position: center top
+		background-image: url('../img/bg/3.png')
+		+r(1023)
+			min-height: 0
+	&_4
+		position: relative
+		z-index: 4
+	&_5
+		position: relative
+		z-index: 5
+		min-height: 1173px
+		background-position: center top
+		background-image: url('../img/bg/5.png')
+		+r(767)
+			min-height: 0
+			background-size: auto 200%
+	&_6
+		position: relative
+		z-index: 6
+	&_7
+		position: relative
+		z-index: 7
+		min-height: 1043px
+		background-position: center top
+		background-image: url('../img/bg/7.jpg')
+		+r(767)
+			background-position: left top
+	&_8
+		position: relative
+		z-index: 8
+	&_9
+		position: relative
+		z-index: 9
+		min-height: 823px
+		background-position: center top
+		background-image: url('../img/bg/9.png')
+		+r(1023)
+			min-height: 0
+	&_10
+		position: relative
+		z-index: 8
+		min-height: 1063px
+		background-position: center top
+		background-image: url('../img/bg/10.jpg')
+		+r(1023)
+			background-position: left top
+			background-size: auto 200%
+		
+.slick-arrow
+	overflow: hidden
+	position: absolute
+	top: 50%
+	margin-top: -16px
+	z-index: 11
+	border-radius: 50%
+	border: 2px solid rgba(255, 255, 255, .65)
+	transition: all 0.35s
+	&:active
+		transform: scale(1.25)
+	&:before
+		content: ''
+		position: absolute
+		z-index: 1
+		top: 5px
+		left: 5px
+		right: 5px
+		bottom: 5px
+		border-radius: 50%
+		background-color: #ffffff
+
+.slick-slide
+	margin-left: 30px
+	margin-right: 30px
+	+r(767)
+		padding-left: 15px
+		padding-right: 15px
+
+.slick-next
+	right: 5px
+
+.slick-prev
+	left: 5px
+
+.slider-arrow
+	+sr('slider-arrow')
+	display: block
+	position: relative
+	z-index: 2
+	&_left
+		transform: rotate(180deg)
+
+/* ===================================
+	 One
+	 =================================== */
+.product
+	position: relative
+	left: -20px
+	margin-top: 50px
+	margin-bottom: -20px
+	display: none
+	+r(1023)
+		display: block
+	&__img
+		display: block
+		width: 220px
+		margin-left: auto
+		margin-right: auto
+		
+.one
+	padding-top: 100px
+	padding-bottom: 240px
+	+r(1023)
+		padding-top: 80px
+	+r(767)
+		padding-bottom: 170px
+	&__product
+		display: none
+		+r(767)
+			display: block
+	&__row
+		+pie-clearfix
+		&-left
+			float: left
+			margin-right: 13px
+			+fira-light
+			font-size: 25px
+			line-height: 1.2
+			text-align: right
+			+r(767)
+				float: none
+				text-align: center
+		&-right
+			float: left
+			+fira-extrabold
+			font-size: 113px
+			text-transform: uppercase
+			line-height: 0.82
+			text-shadow: 0 7px 16.2px rgba(0, 2, 6, 0.6)
+			+r(767)
+				font-size: 55px
+				float: none
+				margin-top: 10px
+				text-align: center
+			+r(374)
+				font-size: 40px
+			&-color
+				color: #e8293b
+	&__block
+		margin-top: 40px
+		font-size: 18px
+		line-height: 1.33
+		+r(767)
+			text-align: center
+		&-text
+			&-color
+				+sans-bold
+	&__list
+		margin-top: 40px
+		font-size: 16px
+		&-item
+			position: relative
+			padding-left: 23px
+			+r(767)
+				display: table
+				margin-left: auto
+				margin-right: auto
+			+r(539)
+				font-size: 14px
+			&:before
+				position: absolute
+				z-index: 1
+				left: 0
+				top: 5px
+				+s('mark-1')
+				content: ''
+	&__block2
+		margin-top: 40px
+		font-size: 18px
+		line-height: 1.33
+		+r(767)
+			text-align: center
+		&-title
+			+sans-bold
+			color: #d5cf3c
+			text-transform: uppercase
+		&-text
+			&-color
+				color: #f1ea30
+				+sans-bold
+	&__count
+		margin-top: 25px
+		margin-left: 23px
+		+r(767)
+			margin-left: auto
+			margin-right: auto
+			width: 240px
+	&__last
+		position: relative
+		margin-top: 25px
+		+pie-clearfix
+		&-arrow
+			position: absolute
+			z-index: 1
+			top: 0
+			right: 100%
+			margin-right: 10px
+		&-btn
+			float: left
+			+r(1023)
+				float: none
+				display: block
+				width: 285px
+				padding-left: 0
+				padding-right: 0
+			+r(767)
+				margin-left: auto
+				margin-right: auto
+	&__price
+		float: left
+		margin-left: 20px
+		+r(1023)
+			float: none
+			position: absolute
+			left: 0
+			top: 50px
+			margin-left: 0
+		+r(767)
+			display: block
+			margin-left: auto
+			margin-right: auto
+			left: 10px
+			width: 302px
+		
+.price
+	position: relative
+	+sans-bold
+	font-size: 86px
+	line-height: 0.65
+	color: #ffffff
+	&__sup
+		position: relative
+		display: inline-block
+		vertical-align: super
+		font-size: smaller
+		transform: scale(0.75)
+		line-height: 0
+		transform-origin: left bottom
+	&__before
+		position: absolute
+		margin-bottom: 10px
+		left: 0
+		bottom: 100%
+		+sans-regular
+		font-size: 26px
+		&:before
+			pointer-events: none
+			position: absolute
+			top: -5px
+			left: -5px
+			+s('canceled')
+			content: ''
+		
+.arrow
+	padding-left: 15px
+	+sans-regular
+	+s('arrow-red')
+	font-size: 18px
+	color: #ffffff
+	text-transform: uppercase
+	animation: arrow 0.75s infinite alternate
+	+r(1619)
+		display: none
+	&__color
+		+sans-bold
+		line-height: 62px
+		
+@keyframes arrow
+	0%
+		transform: translateX(-20px)
+	100%
+		transform: translateX(0)
+		
+.count
+	+sans-regular
+	font-size: 16px
+	color: #000000
+	line-height: 1
+	+pie-clearfix
+	&__circle
+		float: left
+		position: relative
+		z-index: 1
+		width: 109px
+		height: 109px
+		background-color: #fbb340
+		border-radius: 50%
+		+vertical
+		& + &
+			margin-left: 21px
+		&-in
+			display: inline-block
+			vertical-align: middle
+		&:after
+			content: ''
+			pointer-events: none
+			position: absolute
+			top: -7px
+			left: -7px
+			right: -7px
+			bottom: -7px
+			border: 1px solid #fbb340
+			border-radius: 50%
+			z-index: 1
+	&_form &__circle
+		width: 65px
+		height: 65px
+		&:after
+			top: -5px
+			left: -5px
+			right: -5px
+			bottom: -5px
+	&_form &__circle + &__circle
+		margin-left: 15px
+	&__number
+		+sans-bold
+		font-size: 39px
+	&_form &__number
+		font-size: 23px
+	&__desc
+		margin-top: -3px
+		font-size: 16px
+	&_form &__desc
+		margin-top: -2px
+		font-size: 9px
+		
+
+/* ===================================
+	 Two
+	 =================================== */
+.two
+	padding-top: 10px
+	&__title
+		+fira-bold
+		font-size: 55px
+		color: #242424
+		text-align: center
+		line-height: 1.09
+		+r(1023)
+			font-size: 40px
+	&__subtitle
+		+fira-thin
+		font-size: 55px
+		color: #242424
+		text-align: center
+		line-height: 1.09
+		+r(1023)
+			font-size: 40px
+		+r(767)
+			font-size: 28px
+	&__row
+		margin-top: 40px
+		display: table
+		width: 100%
+	&__col
+		display: table-cell
+		width: 50%
+		vertical-align: middle
+		+r(1023)
+			display: block
+			width: auto
+		&:nth-child(1)
+			padding-right: 75px
+			text-align: right
+			+r(1023)
+				display: none
+		&:nth-child(2)
+			vertical-align: top
+	&__list
+		margin-top: 30px
+		color: #242424
+		line-height: 1.88
+		+r(1023)
+			margin-top: 0
+			display: table
+			margin-left: auto
+			margin-right: auto
+		&-item
+			position: relative
+			padding-left: 25px
+			&:before
+				position: absolute
+				z-index: 1
+				top: 7px
+				left: 0
+				+s('mark-2')
+				content: ''
+	&__block
+		margin-top: 50px
+		margin-bottom: 100px
+		+fira-light
+		font-size: 18px
+		color: #242424
+		line-height: 1
+		+r(1023)
+			text-align: center
+		&-sm
+			&-color
+				color: #e8293b
+		&-lg
+			+fira-bold
+			font-size: 30px
+			color: #242424
+			&-color
+				color: #e8293b
+		
+
+/* ===================================
+	 Three
+	 =================================== */
+.three
+	margin-top: -110px
+	padding-top: 180px
+	padding-bottom: 90px
+	+r(1023)
+		padding-top: 120px
+	&__title
+		+fira-ultralight
+		font-size: 55px
+		text-align: center
+		line-height: 1.09
+		+r(1023)
+			font-size: 40px
+		+r(767)
+			font-size: 28px
+		&-color
+			+fira-bold
+	&__row
+		margin-left: -30px
+		margin-right: -30px
+		font-size: 0
+		text-align: center
+	&__item
+		display: inline-block
+		vertical-align: top
+		margin-top: 50px
+		padding: 0 30px
+		width: 33.33%
+		+sans-semibold
+		font-size: 18px
+		line-height: 1.5
+	&__image
+		overflow: hidden
+		margin-bottom: 20px
+		width: 111px
+		height: 111px
+		border-radius: 50%
+		margin-left: auto
+		margin-right: auto
+		border: 3px solid transparent
+		box-shadow: 0 0 0 1px #ffffff
+	
+
+/* ===================================
+	 Four
+	 =================================== */
+.four
+	padding-top: 100px
+	padding-bottom: 100px
+	color: #242424
+	text-align: center
+	+r(1023)
+		padding-top: 50px
+		padding-bottom: 50px
+	&__title
+		+fira-ultralight
+		font-size: 55px
+		line-height: 1.09
+		+r(1023)
+			font-size: 40px
+		+r(767)
+			font-size: 28px
+		&-color
+			+fira-bold
+			color: #e8293b
+	&__row
+		margin-left: -10px
+		margin-right: -10px
+		font-size: 0
+	&__item
+		margin-top: 60px
+		display: inline-block
+		vertical-align: top
+		padding: 0 10px
+		width: 20%
+		+sans-bold
+		font-size: 16px
+		text-transform: uppercase
+		&-image
+			display: inline-block
+			margin-bottom: 15px
+			border-radius: 50%
+			width: 141px
+			height: 141px
+			overflow: hidden
+			border: 4px solid transparent
+			box-shadow: 0 0 0 1px #cfcfcf
+	&__text-lg
+		margin-top: 50px
+		+sans-bold
+		font-size: 30px
+		color: #e8293b
+		text-transform: uppercase
+	&__text-center
+		+sans-semibold
+	&__btn-red
+		margin-top: 45px
+		+r(767)
+			margin-top: 25px
+			padding-left: 20px
+			padding-right: 20px
+			font-size: 14px
+		
+
+/* ===================================
+	 Five
+	 =================================== */
+.five
+	padding-top: 120px
+	color: #242424
+	&__container
+		max-width: 1200px
+	&__title
+		+fira-light
+		font-size: 55px
+		line-height: 1.09
+		text-align: center
+		+r(1023)
+			font-size: 40px
+		+r(767)
+			font-size: 28px
+	&__title-2
+		+fira-bold
+		font-size: 55px
+		color: #e8293b
+		line-height: 1.09
+		text-align: center
+		+r(1023)
+			font-size: 40px
+		+r(767)
+			font-size: 28px
+	&__title-3
+		+fira-thin
+		font-size: 29px
+		line-height: 1.66
+		text-align: center
+		+r(1023)
+			line-height: 1.2
+	&__row
+		margin-top: 30px
+		margin-left: -30px
+		margin-right: -30px
+		font-size: 0
+		+r(1023)
+			margin-bottom: 375px
+			+r(767)
+				margin-bottom: 100px
+	&__item
+		display: inline-block
+		vertical-align: top
+		margin-top: 10px
+		padding-right: 50px
+		+sans-regular
+		font-size: 14px
+		line-height: 22px
+		width: 50%
+		+pie-clearfix
+		&.is-first &-image
+			position: relative
+			top: -25px
+		&.is-second &-image
+			position: relative
+			top: -25px
+			transform: scale(1.2)
+			+r(1023)
+				transform-origin: top left
+				transform: scale(1.5)
+				top: -40px
+			+r(767)
+				transform-origin: top center
+				top: -25px
+		&-image
+			position: relative
+			float: left
+			width: 225px
+			text-align: center
+			+r(1023)
+				float: none
+				width: auto
+				height: 120px
+		&-img
+			margin-left: auto
+			margin-right: auto
+			+r(1023)
+				margin-left: 0
+				margin-right: 0
+				width: auto
+				height: 100%
+			+r(767)
+				margin-left: auto
+				margin-right: auto
+		&-title
+			+sans-bold
+			font-size: 20px
+			color: #E52C40
+			text-transform: uppercase
+			+r(767)
+				text-align: center
+		&-content
+			overflow: hidden
+			+sans-regular
+			font-size: 16px
+			+r(767)
+				text-align: center
+	&__el
+		position: absolute
+		z-index: 2
+		bottom: 140px
+		left: 50%
+		transform: translateX(-50%)
+		text-align: center
+		color: #212020
+		+r(767)
+			position: relative
+			bottom: auto
+			left: auto
+			transform: none
+			padding-bottom: 50px
+			padding-left: 15px
+			padding-right: 15px
+		+r(374)
+			br
+				display: none
+		&-bold
+			margin-top: 30px
+			+sans-bold
+	.slick-arrow
+		top: auto
+		bottom: -50px
+	.slick-prev
+		left: 50%
+		transform: translateX(-110%)
+	.slick-next
+		right: 50%
+		transform: translateX(110%)
+		
+	
+.six
+	padding-top: 50px
+	padding-bottom: 45px
+	color: #242424
+	&__title
+		+fira-ultralight
+		font-size: 55px
+		text-align: center
+		line-height: 1.09
+		+r(1023)
+			font-size: 40px
+		+r(767)
+			font-size: 28px
+		&-color
+			+fira-bold
+			color: #e8293b
+	&__list
+		margin-top: 50px
+		&-item
+			position: relative
+			padding-left: 40px
+			& + &
+				margin-top: 24px
+			&:before
+				position: absolute
+				z-index: 1
+				top: 0
+				left: 0
+				+s('mark-3')
+				content: ''
+		
+/* ===================================
+	 Seven
+	 =================================== */
+.seven
+	padding-top: 200px
+	padding-bottom: 140px
+	color: #242424
+	+r(767)
+		padding-top: 100px
+	&__title
+		+fira-ultralight
+		font-size: 55px
+		line-height: 1.09
+		text-align: center
+		+r(1023)
+			font-size: 40px
+		+r(767)
+			font-size: 28px
+		&-color
+			+fira-bold
+			color: #e8293b
+	&__el
+		margin-top: 55px
+		+pie-clearfix
+		&-image
+			overflow: hidden
+			float: left
+			margin-right: 50px
+			border: 8px solid transparent
+			box-shadow: 0 0 0 1px #ffffff
+			border-radius: 50%
+			position: relative
+			+r(767)
+				left: 50%
+				transform: translateX(-50%)
+				margin-right: 0
+		&-img
+			width: 268px
+			+r(1023)
+				width: 164px
+		&-content
+			overflow: hidden
+			+r(767)
+				margin-top: 20px
+				float: left
+	&__text
+		& + &
+			margin-top: 20px
+			+r(767)
+				margin-top: 10px
+	&__btn-red
+		margin-top: 45px
+		+r(767)
+			padding-left: 20px
+			padding-right: 20px
+			font-size: 16px
+			margin-bottom: 30px
+		
+	
+
+/* ===================================
+	 Eight
+	 =================================== */
+.eight
+	padding-top: 100px
+	padding-bottom: 110px
+	color: #242424
+	+r(1023)
+		padding-top: 40px
+		padding-bottom: 60px
+	+r(767)
+		margin-top: -70px
+	&__title
+		+fira-ultralight
+		font-size: 55px
+		line-height: 1.09
+		text-align: center
+		+r(1023)
+			font-size: 40px
+		+r(767)
+			font-size: 28px
+		&-color
+			+fira-bold
+			color: #e8293b
+	&__comment
+		margin-top: 55px
+		.comment
+			+ .comment
+				margin-top: 45px
+		
+.comment
+	+pie-clearfix
+	&__image
+		overflow: hidden
+		float: left
+		margin-right: 50px
+		width: 118px
+		height: 118px
+		border: 4px solid transparent
+		box-shadow: 0 0 0 1px #d6d6d6
+		border-radius: 50%
+		+r(767)
+			margin-right: 30px
+			width: 64px
+			height: 64px
+	&__content
+		overflow: hidden
+		+r(767)
+			overflow: visible
+	&__title
+		+sans-bold
+		
+
+/* ===================================
+	 Nine
+	 =================================== */
+.nine
+	padding-top: 120px
+	padding-bottom: 200px
+	color: #242424
+	+r(1023)
+		padding-top: 80px
+		padding-bottom: 120px
+	&__title
+		+fira-ultralight
+		font-size: 55px
+		line-height: 1.09
+		text-align: center
+		+r(1023)
+			font-size: 40px
+		+r(767)
+			font-size: 28px
+		&-color
+			+fira-bold
+			color: #e8293b
+	&__row
+		margin-top: 45px
+		margin-left: -30px
+		margin-right: -30px
+		font-size: 0
+		text-align: center
+	&__item
+		display: inline-block
+		vertical-align: top
+		width: 25%
+		padding: 0 30px
+		font-size: 14px
+		line-height: 1.71
+		&-image
+			overflow: hidden
+			position: relative
+			left: -5px
+			margin-bottom: 35px
+			width: 156px
+			height: 156px
+			margin-left: auto
+			margin-right: auto
+			border-radius: 50%
+			border: 7px solid transparent
+			box-shadow: 0 0 0 1px #fff
+		&-text
+			font-size: 14px
+		
+		
+/* ===================================
+	 Ten
+	 =================================== */
+.ten
+	margin-top: -130px
+	padding-top: 140px
+	color: #ffffff
+	&__title
+		+fira-extrabold
+		text-shadow: 0 7px 16.2px rgba(0, 2, 6, 0.6)
+		font-size: 55px
+		line-height: 1.09
+		text-align: center
+		+r(1023)
+			font-size: 40px
+		+r(767)
+			font-size: 28px
+		&-color
+			color: #e8293b
+			font-size: 72px
+			text-transform: uppercase
+			+r(1023)
+				font-size: 40px
+			+r(767)
+				font-size: 28px
+		&-md
+			+fira-ultralight
+		&-sm
+			position: relative
+			top: -10px
+			font-size: 30px
+			+fira-ultralight
+			+r(1023)
+				top: 0
+				font-size: 24px
+		&-color2
+			position: relative
+			top: -10px
+			font-size: 30px
+			+fira-extrabold
+			+r(1023)
+				top: 0
+				font-size: 24px
+	&__row
+		margin-top: 20px
+		font-size: 0
+	&__item
+		display: inline-block
+		vertical-align: top
+		width: 33.33%
+		padding-left: 30px
+		padding-right: 30px
+		font-size: 16px
+		+r(1023)
+			padding-left: 5px
+			padding-right: 5px
+			font-size: 14px
+		+r(767)
+			width: 100%
+			padding: 0
+			& + &
+				margin-top: 30px
+		&-image
+			position: relative
+			height: 100px
+			overflow: hidden
+			&:before
+				content: ''
+				z-index: 1
+				+vcenter
+		&:nth-child(1) &-image
+			&:before
+				+s('nine-1')
+		&:nth-child(2) &-image
+			&:before
+				+s('nine-2')
+		&:nth-child(3) &-image
+			&:before
+				+s('nine-3')
+		&-text
+			line-height: 1.5
+			text-align: center
+			text-transform: uppercase
+			+r(767)
+				max-width: 420px
+				margin-left: auto
+				margin-right: auto
+	&__price
+		float: left
+		margin-top: 60px
+		white-space: nowrap
+	&__row2
+		+pie-clearfix
+	&__col2
+		float: left
+		+r(767)
+			float: none
+			display: table
+			margin-left: auto
+			margin-right: auto
+			margin-top: 50px
+		&:nth-child(1)
+			padding-left: 35px
+			+r(767)
+				padding: 20px
+				background-color: #1e2c35
+		&:nth-child(2)
+			padding-top: 75px
+			margin-left: 75px
+			+r(767)
+				padding-top: 0
+				margin-left: auto
+				margin-top: 0
+				padding-bottom: 30px
+	&__title2
+		margin-top: 90px
+		font-size: 22px
+		line-height: 1.09
+		text-transform: uppercase
+		text-align: center
+		+sans-bold
+		+r(767)
+			margin-top: 0
+		&-color
+			color: #eb2d3f
+	&__form
+		margin-top: 15px
+		width: 285px
+		+r(539)
+			width: 100%
+	
+.form
+	.help-block
+		display: none
+	&__field
+		& + &
+			margin-top: 10px
+	&__input
+		padding: 0 15px
+		width: 100%
+		height: 41px
+		line-height: 41px
+		+sans-regular
+		font-size: 16px
+		color: #242424
+		background-color: #ffffff
+		+placeholder-color(#778085)
+		&.error
+			box-shadow: inset 0 0 2px 2px #E83044
+			+placeholder-color(#E83044)
+	&__last
+		position: relative
+		margin-top: 20px
+		&-arrow
+			position: absolute
+			z-index: 1
+			top: 0
+			right: 100%
+			margin-right: 50px
+	&__count
+		display: inline-block
+		margin-top: 25px
+		vertical-align: top
+	&__submit
+		padding-left: 0
+		padding-right: 0
+		width: 100%
+		white-space: nowrap
+	&__desc
+		margin-top: 45px
+		color: #68767d
+		font-size: 14px
+		line-height: 1.29
+		text-align: center
+		padding-bottom: 20px
+		+r(1023)
+			color: #ffffff
+		
+
+/* ===================================
+	 Other Styles
+	 =================================== */
+.slick-initialized
+	margin-left: -15px
+	margin-right: -15px
+	padding-left: 0
+	padding-right: 0
+	.slick-slide
+		padding-left: 0
+		padding-right: 0
+		
+/* Modal
+	----------------------------------- */
+.modal
+	display: none
+	cursor: pointer
+	position: fixed
+	z-index: 101
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	height: 100%
+	width: 100%
+	overflow: auto
+	padding: 20px
+	+sans-regular
+	font-size: 16px
+	font-weight: 400
+	color: #464646
+	background-color: rgba(17, 17, 17, .78)
+	+vertical
+	&__in
+		cursor: default
+		overflow: hidden
+		position: relative
+		display: inline-block
+		vertical-align: middle
+		text-align: left
+		max-width: 460px
+	&__desc
+		margin-top: 30px
+		color: #656565
+	&__text
+		margin-bottom: 20px
+		font-size: 16px
+		color: #656565
+		line-height: 1.4
+	&__title
+		position: relative
+		background-color: darken(#E9CB2E,10)
+		color: #ffffff
+		font-size: 18px
+		text-transform: uppercase
+		+sans-semibold
+		text-align: center
+		padding: 25px 5px
+		border-radius: 5px 5px 0 0
+		&:before
+			content: ''
+			position: absolute
+			z-index: 1
+			left: 50%
+			top: 100%
+			margin-left: -8px
+			+arr(16,8,darken(#E9CB2E,10),b)
+	&__input
+		border: 2px solid #B3B3B3
+		height: 50px
+		line-height: 50px
+		&.error
+			box-shadow: none
+	&__content
+		padding: 25px 25px 15px 25px
+		background-color: #ffffff
+		border-radius: 0 0 5px 5px
+	&__close
+		cursor: pointer
+		position: absolute
+		transform: scale(0.5)
+		top: 5px
+		right: 5px
+		z-index: 1
+		font-size: 0
+		color: #4c4f60

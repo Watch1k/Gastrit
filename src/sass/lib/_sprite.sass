@@ -1,0 +1,112 @@
+$icons: (0:0)
+$icons: map-merge($icons,(arrow-red: (X: 0px, Y:0px, W: 348px, H: 62px, TW: 348px, TH: 202px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(canceled: (X: -108px, Y:-66px, W: 105px, H: 28px, TW: 348px, TH: 202px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(close: (X: -247px, Y:-66px, W: 24px, H: 24px, TW: 348px, TH: 202px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(mark-1: (X: -296px, Y:-66px, W: 15px, H: 12px, TW: 348px, TH: 202px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(mark-2: (X: -275px, Y:-66px, W: 17px, H: 16px, TW: 348px, TH: 202px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(mark-3: (X: -217px, Y:-66px, W: 26px, H: 26px, TW: 348px, TH: 202px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(nine-1: (X: 0px, Y:-66px, W: 104px, H: 50px, TW: 348px, TH: 202px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(nine-2: (X: -59px, Y:-120px, W: 64px, H: 67px, TW: 348px, TH: 202px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(nine-3: (X: 0px, Y:-120px, W: 55px, H: 82px, TW: 348px, TH: 202px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(slider-arrow: (X: -127px, Y:-120px, W: 64px, H: 64px, TW: 348px, TH: 202px, IMG: '../img/icons.png')))
+
+
+// Gets an attribute from the sass map
+@function icon-attr($icon, $attr)
+	$icon: map-get($icons, $icon)
+	@return map-get($icon, $attr)
+
+@mixin sprite($iconName)
+	background-image: url(icon-attr($iconName, IMG))
+	width: icon-attr($iconName, W)
+	height: icon-attr($iconName, H)
+	background-position: icon-attr($iconName, X) icon-attr($iconName, Y)
+@mixin sprite-position($iconName)
+	background-position: icon-attr($iconName, X) icon-attr($iconName, Y)
+@mixin sprite-retina($iconName)
+	background-image: url(icon-attr($iconName, IMG))
+	$width: icon-attr($iconName, W)
+	$height: icon-attr($iconName, H)
+	width: $width/2
+	height: $height/2
+	$x: icon-attr($iconName, X)
+	$y: icon-attr($iconName, Y)
+	background-position: $x/2 $y/2
+	$tw: icon-attr($iconName, TW) 	
+	$th: icon-attr($iconName, TH)
+	background-size: $tw/2 $th/2
+@mixin sprite-position-retina($iconName)
+	$x: icon-attr($iconName, X)
+	$y: icon-attr($iconName, Y)
+	background-position: $x/2 $y/2
+
+
+@mixin s($i)
+	+sprite($i)
+@mixin sp($i)
+	+sprite-position($i)
+@mixin sr($i)
+	+sprite-retina($i)
+@mixin spr($i)
+	+sprite-position-retina($i)
+
+.icon-arrow-red
+	width: 348px
+	height: 62px
+	background-image: url('../img/icons.png')
+	background-position: 0px 0px
+	background-size: 348px 202px
+.icon-canceled
+	width: 105px
+	height: 28px
+	background-image: url('../img/icons.png')
+	background-position: -108px -66px
+	background-size: 348px 202px
+.icon-close
+	width: 24px
+	height: 24px
+	background-image: url('../img/icons.png')
+	background-position: -247px -66px
+	background-size: 348px 202px
+.icon-mark-1
+	width: 15px
+	height: 12px
+	background-image: url('../img/icons.png')
+	background-position: -296px -66px
+	background-size: 348px 202px
+.icon-mark-2
+	width: 17px
+	height: 16px
+	background-image: url('../img/icons.png')
+	background-position: -275px -66px
+	background-size: 348px 202px
+.icon-mark-3
+	width: 26px
+	height: 26px
+	background-image: url('../img/icons.png')
+	background-position: -217px -66px
+	background-size: 348px 202px
+.icon-nine-1
+	width: 104px
+	height: 50px
+	background-image: url('../img/icons.png')
+	background-position: 0px -66px
+	background-size: 348px 202px
+.icon-nine-2
+	width: 64px
+	height: 67px
+	background-image: url('../img/icons.png')
+	background-position: -59px -120px
+	background-size: 348px 202px
+.icon-nine-3
+	width: 55px
+	height: 82px
+	background-image: url('../img/icons.png')
+	background-position: 0px -120px
+	background-size: 348px 202px
+.icon-slider-arrow
+	width: 64px
+	height: 64px
+	background-image: url('../img/icons.png')
+	background-position: -127px -120px
+	background-size: 348px 202px
